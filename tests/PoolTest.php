@@ -77,7 +77,6 @@ final class PoolTest extends TestCase
             services: [
                 $md = new File\ServiceDescriptor(
                     name: 'thesis.api.RequestService',
-                    clientFqcn: \stdClass::class,
                     methods: [
                         new File\MethodDescriptor('Echo'),
                     ],
@@ -95,7 +94,6 @@ final class PoolTest extends TestCase
             services: [
                 new File\ServiceDescriptor(
                     name: 'thesis.api.RequestService',
-                    clientFqcn: \stdClass::class,
                 ),
             ],
         ));
