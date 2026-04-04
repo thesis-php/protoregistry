@@ -86,6 +86,7 @@ final class PoolTest extends TestCase
 
         self::assertEquals($md, $pool->serviceDescriptorByType('thesis.api.RequestService'));
         self::assertEquals($file, $pool->fileBySymbol('thesis.api.RequestService.Echo'));
+        self::assertEquals($file, $pool->fileBySymbol('thesis.api.RequestService'));
         self::assertEquals($descriptor, $pool->descriptorByFilename($file->name));
 
         $this->expectExceptionObject(new \RuntimeException('Type "thesis.api.RequestService" is already registered in the \Thesis\Protobuf\Registry\Pool. Ensure that you are using protobuf compiler correctly, or use \Thesis\Protobuf\Registry\OnceRegistrar to prevent duplicate registration of types in the pool'));
