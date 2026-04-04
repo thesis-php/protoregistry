@@ -151,6 +151,7 @@ final class Pool
             }
 
             $pool->services[$service->name] = $service;
+            $pool->symbols[$service->name] = $file->name;
 
             foreach ($service->methods as $method) {
                 $pool->symbols["{$service->name}.{$method->name}"] = $file->name;
